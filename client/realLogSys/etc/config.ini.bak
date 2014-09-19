@@ -1,0 +1,43 @@
+[mysql]
+username = 37game
+password = 37game
+hostname = 122.226.212.245
+database = 37_game
+port = 3306
+[ads]
+url = https://14.18.204.147/index.php
+cookie = cookie_file.txt
+blacklistUrl = https://14.18.204.147/blacklist.php
+rulesUrl = https://14.18.204.147/aclextra.php
+username = admin
+password = 37.com147
+[level_1]
+logFile     =  /usr/local/webserver/nginx/logs/reg.my.php.log		
+callCount    = 10
+ipCount      = 10
+timeMin      = 1
+timeMax      = 10
+[level_2]
+logFile     =  /usr/local/webserver/nginx/logs/reg.my.php.log
+callCount    = 10
+ipCount      = 40
+timeMin      = 1
+timeMax      = 60
+[level_3]
+logFile     =  /usr/local/webserver/nginx/logs/reg.my.php.log
+callCount    = 5
+ipCount      = 20
+timeMin      = 1
+timeMax      = 60
+[level_4]
+logFile     =  /usr/local/webserver/nginx/logs/reg.my.php.log
+callCount    = 5
+ipCount      = 10
+timeMin      = 1
+timeMax      = 60
+[level_test]
+logFile     =  /usr/local/webserver/nginx/logs/reg.my.php.log
+callCount    = 5
+ipCount      = 10
+timeMin      = 1
+timeMax      = 20
