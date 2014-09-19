@@ -238,8 +238,7 @@ sub logSetRedis {
     );
     my $saveTime = 3600 * 24 - $hour * 3600;
     $r->expire( "logreal:$date:$logType", $saveTime )
-      unless $r->exists(
-        "logreal:$date:$logType")    #判断此键值，进行添加ttl
+      if $r->ttl("logreal:$date:$logType") == -1;
 
 }
 
