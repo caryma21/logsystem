@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link rel="stylesheet" href="css/grumble.min.css?v=5">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/typica-login.css">
+	
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/lhgcalendar.min.js"></script>
+	<script type="text/javascript">
+$(function(){
+    $('#demo_inp1').calendar();
+	$('#img').calendar({ id:'#cal3' });
+});
+	</script>
+</head>
+
+<% IF session.user%>
+
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+         <a class="brand" href="#">37游戏-技术中心-运维组</a>
+        <div class="pull pull-right" style="margin:20px;">
+          <a class="btn btn-primary" href="/logout">退出</a>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+        	<div class="span6">
+        		
+        		<div class="register-info-wraper">
+        			<div id="register-info">
+        			
+        				<h1>如何使用?</h1>
+        			
+        				<ul dir="rtl">
+        					<li>选择正确的查询类型</li>
+        					<li>选择你需要查询的日期</li>
+        					<li>最后输入你需要查的内容</li>
+
+        				</ul>
+        				
+        			</div>
+        		</div>
+
+        	</div>
+
+
+
+
+<div class="span6">
+        		<div id="register-wraper">
+        		    <form class="form-horizontal" action='/search' method='post'>
+        		        <legend> <span class="blue">查询任务</span></legend>
+        		        <div class="body">
+        		        	<!-- first name -->
+        		        	<div class="control-group control-inline">
+                                <label class="col-sm-2 control-label">查询类型</label>
+                                  <select class="form-control form-control-static" name="type">
+                                     <option>请选择类型</option>
+                                     <option value="my">my</option>
+                                     <option value="www">www</option>
+                                  </select>
+        		        	</div>
+                            <div class="control-group control-inline">
+                                <label class="col-sm-2 control-label" >查询日期</label>
+                                <input class="runcode" type="text"  name="date" id="demo_inp1" value="" style="width:208px"；/>
+                            </div>
+                            <div class="control-group control-inline">
+                                <label class="col-sm-2 control-label">输入IP/帐号</label>
+                                <textarea class="form-control" rows="8" name="info" id="h1"></textarea>
+                            </div>
+        		        </div>
+        		    
+        		        <div class="footer">
+        		            <input type="submit" name="submit" class="btn btn-success">
+                                     
+        		        </div>
+        		    </form>
+        		</div>
+        	</div>
+               
+
+	
+	<script src="js/jquery.grumble.min.js?v=7"></script>
+
+	<script>
+	
+		$('#h1').grumble(
+			{
+			
+				
+				text: '支持混合查询，以换行分割<br>输入IP信息如:<br>114.114.114.114<br>114.114.114.115<br>帐号信息如:<br>aaaaa<br>bbbbb',
+		angle: 95,
+		distance: 0,
+		//showAfter: 4000,
+		hideAfter: false,
+		hasHideButton: true,
+		buttonHideText: 'Pop!',
+		type: 'alt-', 
+				
+			}
+		);
+	
+		
+	</script>
+                   <footer class="white navbar-fixed-bottom">
+      在使用当中有任何问题，请联系马辰龙。Email: machenlong@37.com 
+      
+    </footer>
+
+
+
+
+
+<%ELSE%>
+<% table %>
+<%END%>

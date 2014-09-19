@@ -1,0 +1,40 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+
+
+	<link rel="stylesheet" href="css/grumble.min.css?v=5">
+
+	
+</head>		
+
+
+	<input type="text" id="h1">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/jquery.grumble.min.js?v=7"></script>
+
+	<script>
+	
+		$('#h1').grumble(
+			{
+			
+				
+				text: '支持混合查询，以换行分割<br>输入IP信息如:<br>114.114.114.114<br>114.114.114.115<br>帐号信息如:<br>aaaaa<br>bbbbb',
+		angle: 75,
+		distance: 50,
+		//showAfter: 4000,
+		hideAfter: false,
+		hasHideButton: true,
+		buttonHideText: 'Pop!',
+		type: 'alt-', 
+				
+			}
+		);
+	
+		
+	</script>
+	

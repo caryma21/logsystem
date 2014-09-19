@@ -1,0 +1,9 @@
+
+<% IF session.user%>
+
+<%info%>
+<%date%>
+<% logout %>
+<%ELSE%>
+<% table %>
+<%END%>
